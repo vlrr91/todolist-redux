@@ -27,3 +27,18 @@ export function deleteTodo(id) {
     }
   }
 }
+
+export function setVisibilityFilter(filter) {
+  return {
+    type: 'SET_VISIBILITY_FILTER',
+    payload: {
+      filter
+    }
+  }
+}
+
+export const VisibilityFilters = {
+  SHOW_ALL: 'SHOW_ALL',
+  SHOW_ACTIVE: 'SHOW_ACTIVE',
+  SHOW_COMPLETED: 'SHOW_COMPLETED'
+}
