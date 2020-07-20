@@ -1,10 +1,10 @@
-let nextTodoId = 0;
+import { v4 as uuid } from 'uuid';
 
 export function addTodo(text) {
   return {
     type: 'ADD_TODO',
     payload: {
-      id: nextTodoId++,
+      id: uuid(),
       text
     }
   };

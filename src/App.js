@@ -1,4 +1,11 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+
+// Redux
+import store, { saveState } from './store';
+
+// Hooks
+import useSaveState from './hooks/useSaveState';
 
 // Containers
 import AddTodo from './containers/AddTodo';
@@ -11,12 +18,16 @@ import Tabs from './components/Tabs';
 import './App.css';
 
 function App() {
+  useSaveState(store, saveState);
+
   return (
-    <>
-      <AddTodo />
-      <Tabs />
-      <VisibleTodoList />
-    </>
+    <Provider store={store}>
+      <>
+        <AddTodo />
+        <Tabs />
+        <VisibleTodoList />
+      </>
+    </Provider>
   );
 }
 
