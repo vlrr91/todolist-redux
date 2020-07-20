@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 // Components
 import Todo from './Todo';
 
-export default function TodoList({ todos }) {
+export default function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
     <ul>
       {todos.map(todo => (
         <Todo
           key={todo.id}
-          text={todo.text} />
+          {...todo}
+          toggleTodo={() => toggleTodo(todo.id)}
+          deleteTodo={() => deleteTodo(todo.id)} />
       ))}
     </ul>
   );
