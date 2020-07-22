@@ -1,0 +1,19 @@
+.tab-btn {
+  border: 1px solid var(--primary-color);
+  border-left: none;
+  display: block;
+  background-color: white;
+  color: var(--primary-color);
+  height: 35px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.tab-btn:first-child {
+  border-left: 1px solid var(--primary-color);
+}

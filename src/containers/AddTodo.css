@@ -1,0 +1,27 @@
+.todo-input,
+.todo-btn-add {
+  display: block;
+}
+
+.todo-input {
+  height: 35px;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  color: var(--primary-text);
+}
+
+.todo-btn-add {
+  border: none;
+  height: 35px;
+  padding: 0 1em;
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.todo-btn-add:hover {
+  background-color: var(--primary-color-dark);
+}

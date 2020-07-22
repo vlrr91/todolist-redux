@@ -22,11 +22,12 @@ function App() {
 
   return (
     <Provider store={store}>
-      <>
+      <main className="todo-main">
+        <h1 className="todo-title">TODO LIST</h1>
         <AddTodo />
         <Tabs />
         <VisibleTodoList />
-      </>
+      </main>
     </Provider>
   );
 }

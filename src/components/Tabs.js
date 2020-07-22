@@ -6,10 +6,12 @@ import { VisibilityFilters } from '../actions';
 // Containers
 import FilterTab from '../containers/FilterTab';
 
+// Styles
+import './Tabs.css';
+
 export default function Tabs() {
   return (
-    <div>
-      <span>Show: </span>
+    <div className="tabs-todo">
       <FilterTab filter={VisibilityFilters.SHOW_ALL}>
         All
       </FilterTab>

@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 // Actions
 import { addTodo } from '../actions';
 
+// Styles
+import './AddTodo.css';
+
 function AddTodo({ dispatch }) {
   let input;
 
@@ -19,10 +22,14 @@ function AddTodo({ dispatch }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input ref={node => (input = node)} />
+        <input
+          ref={node => (input = node)}
+          className="todo-input"
+          placeholder="write here" />
         <input
           type="submit"
-          value="Add Todo" />
+          value="Add Todo"
+          className="todo-btn-add" />
       </form>
     </div>
   );

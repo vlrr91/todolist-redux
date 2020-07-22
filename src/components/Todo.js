@@ -1,20 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Style
+import './Todo.css';
+
 export default function Todo({
   text,
   completed,
   toggleTodo,
   deleteTodo
 }) {
+  const completedClass = completed ? 'completed' : '';
+
   return (
     <li
-      onClick={toggleTodo}
-      style={{
-        textDecoration: completed ? 'line-through' : 'none'
-      }}>
-      {text}
-      <button onClick={deleteTodo}>Delete</button>
+      className={`todo ${completedClass}`}
+      onClick={toggleTodo}>
+      <span>{text}</span>
+      <button
+        className="todo-btn-delete"
+        onClick={deleteTodo}>Delete</button>
     </li>
   );
 }

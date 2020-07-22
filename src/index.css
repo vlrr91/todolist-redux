@@ -1,3 +1,12 @@
+:root {
+  --primary-color: rgb(159, 85, 228);
+  --primary-color-dark: rgb(144, 40, 241);
+  --success-color: rgb(83, 190, 83);
+  --danger-color: rgb(253, 74, 74);
+  --border-color: #CCC;
+  --primary-text: #555;
+}
+
 *,
 *::before,
 *::after { box-sizing: border-box; }
@@ -9,6 +18,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--primary-text);
 }
 
 code {

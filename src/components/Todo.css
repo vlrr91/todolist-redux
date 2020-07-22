@@ -1,0 +1,27 @@
+.todo {
+  padding: .5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  cursor: pointer;
+}
+
+.todo:hover {
+  color: var(--success-color);
+}
+
+
+.completed span {
+  text-decoration: line-through;
+  color: var(--success-color);
+}
+
+.todo-btn-delete {
+  background-color: var(--danger-color);
+  border: none;
+  color: white;
+  padding: .5em 1em;
+  margin-left: 10px;
+  cursor: pointer;
+  align-self: flex-start;
+}

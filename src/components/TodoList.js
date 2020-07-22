@@ -4,9 +4,12 @@ import PropTypes from 'prop-types';
 // Components
 import Todo from './Todo';
 
+// Styles
+import './TodoList.css';
+
 export default function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
-    <ul>
+    <ul className="todo-list">
       {todos.map(todo => (
         <Todo
           key={todo.id}
